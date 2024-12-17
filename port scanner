@@ -1,0 +1,26 @@
+## This is me as a newbie in python and spearing towards penetration testing.
+## This built with help of Ai
+## This project is a common port scanner , that reveals the port that is open, closed or filtered. This information can be used to establish remote connection.
+# Please leave your suggestions and contributions to reveal best ways to achieve this  with a better code 
+ 
+import socket 
+# defining the target 
+target = '127.0.0.1'
+# defining the port range 
+port_range = (1,1024)
+
+# structure placeholder 
+def scan_port(port):
+    try:
+        # creating a socket object 
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s : 
+            s.settimeout(1) # To Speed up things
+            result = s.connect_ex((target,port))
+            if result == 0:
+                print(f" port {port} is open ")
+    except Exception as e:
+        print(f"error scanning port {port}: {e}")
+        
+if __name__ == "__main__":
+    for port in range (*port_range):
+        scan_port(port)
