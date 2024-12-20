@@ -21,5 +21,5 @@ A lightweight Python script to scan open ports on a given IP address or domain.
    cd port-scanner
 2. run the script: 🗒️
    python port_scanner.py -t 127.0.0.1 -p 20-8
-   python port_scanner.py -t <target_ip> -p <port_range>  
+   python 'port scanner' -t <target_ip> -p <port_range>  
 
